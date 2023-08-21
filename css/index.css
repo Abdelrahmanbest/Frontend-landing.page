@@ -1,0 +1,528 @@
+:root{
+    --lightcolor:rgb(251, 217, 249);
+    --darkcolor: rgb(63, 63, 63);
+}
+
+body{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: rgb(251, 217, 249);
+
+    font-family: sans-serif;
+
+
+}
+.background-left-circle{
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+.background-right-circle{
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(50%,50%);
+}
+/**/
+.web-screen{
+    width: 90%;
+    height: 90vh;
+    background-color: rgb(35, 35, 35);
+    border-radius: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/**/
+.nav-bar{
+    width: 100%;
+    height: 15%;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    display: flex;
+}
+
+.logo{
+    height: 100%;
+    width: 20%;
+
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(251, 217, 249);
+
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.nav-items{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav-items ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    color: rgb(251, 217, 249);
+    font-size: 20px;
+
+    line-height: 150%;
+    
+}
+
+.nav-items ul li{
+    margin-left: 10px;
+    margin-right: 10px;
+
+    transition: 0.5s;
+
+    user-select: none;
+    cursor: pointer;
+
+    padding-bottom: 2px;
+}
+
+.nav-items ul li:hover{
+    box-shadow: 0px -3px 0px 0px rgb(251, 217, 249) inset;
+    outline: none;
+}
+
+
+
+.btns{
+    height: 100%;
+    width: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 10px;
+
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+
+    background-color: rgb(251, 217, 249);
+    border: none;
+    border-radius: 7px;
+
+    transition: .5s;
+}
+.btn:hover{
+    background-color: black;
+    color: rgb(251, 217, 249);
+}
+
+/**/
+.page{
+
+    width: 100%;
+    height: 85%;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    display: flex;
+}
+
+.left-section{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.info{
+    width: 70%;
+}
+.info p{
+    color: rgb(251, 217, 249);
+    margin-top: 20px;
+    
+}
+.info p:nth-child(2){
+    font-size: 30px;
+    font-weight: bold;
+    width: 90%;
+}
+
+
+
+/**/
+.right-section
+{
+    height: 100%;
+    width: 50%;
+
+    position: relative;
+
+}
+
+.mobile-screen{
+    width: 200px;
+    height: 350px;
+    background-color: rgb(5, 43, 43);
+
+    position: absolute;
+    left: 40%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+
+
+    border-radius: 40px;
+    border-left: none;
+    border-right: none;
+    border-top: 5px solid rgb(30, 30, 30);
+    border-bottom: 5px solid rgb(30, 30, 30);
+
+    box-shadow: 20px 40px 30px 10px #090909;
+}
+
+.mobile-screen::before{
+    content: "";
+    width: 10px;
+    height: 90%;
+    background-color: white;
+
+    position: absolute;
+    left: 2px;
+    top: 15px;
+
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+
+    filter: blur(4px);
+    opacity: .07;
+}
+.mobile-screen::after{
+    content: "";
+    width: 10px;
+    height: 90%;
+    background-color: white;
+
+    position: absolute;
+    right: 2px;
+    top: 15px;
+
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+
+    filter: blur(4px);
+    opacity: .07;
+}
+
+.top-bar{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(5, 43, 43);
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.top-bar .fa{
+    color: rgb(251, 217, 249);
+}
+
+.top-bar p{
+    color: rgb(251, 217, 249);
+}
+/**/
+
+.credits{
+    width: 190%;
+    height: 30%;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+}
+.cards{
+    width: 90%;
+    height: 90%;
+
+    display: flex;
+    gap: 10px;
+
+    transition: .5s;
+
+}
+.cards.active{
+    transform: translateX(-50%);
+}
+
+
+.card{
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 15px;
+    position: relative;
+    
+    overflow: hidden;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card .fa{
+    font-size: 70px;
+    transform: translate(50%,-50%);
+}
+
+.card .fa-circle{
+    position: absolute;
+    right: 10px;
+
+}
+
+.card-text{
+    width: 80%;
+    height: 100%;
+
+
+}
+
+.card-text p{
+    margin-left: 15px;
+    font-size: 10px;
+}
+
+.visa-icon{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.visa-icon .favisa {
+    text-align: center;
+    font-size: 5px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+.visa-icon p{
+    font-size: 10px;
+}
+
+.white-card{
+    background-color: var(--lightcolor);
+    color: var(--darkcolor);
+
+}
+.black-card{
+
+    background-color: var(--darkcolor);
+    color: var(--lightcolor);
+}
+
+
+.navigation{
+    display: flex;
+    gap: 5px;
+
+    position: absolute;
+    bottom: -8px;
+    left: 95px;
+}
+.navigation .fa{
+    font-size: 5px;
+    color: gray;
+}
+
+.navigation .fa.active{
+    color: var(--lightcolor);
+}
+
+/**/
+.mob-btns{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(5, 43, 43);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.mob-btn{
+    width: 40%;
+    height: 50%;
+    background-color: rgb(251, 217, 249);
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    transition: .5s;
+}
+.mob-btn:hover{
+    background-color: black;
+    color: rgb(251, 217, 249);
+}
+
+.mob-btn p{
+    
+    font-size: 10px;
+    margin-top: 0px;
+    margin-bottom: 0;
+    font-weight: bold;
+
+    user-select: none;
+}
+
+
+/**/
+.history{
+    width: 100%;
+    height: 30%;
+    background-color: rgb(5, 43, 43);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.history .hh{
+    margin-top: 0;
+    margin-left: 30px;
+    width: 100%;
+    height: 5%;
+    color: var(--lightcolor);
+    font-size: 12px;
+}
+
+.history-items
+{
+    width: 100%;
+    height: 95%;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+.history-item{
+
+    width: 100%;
+    height: 30%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    font-weight: bold;
+    
+}
+.history-item .icon{
+    width: 30%;
+    text-align: center;
+}
+.history-item i{
+    color: var(--darkcolor);
+    background-color: var(--lightcolor);
+    padding: 4px;
+
+    border-radius: 25%;
+    transition: .2s;
+
+}
+.history-item i:hover{
+    color: var(--lightcolor);
+    background-color: black;
+}
+
+
+.history-item .text{
+    color: var(--lightcolor);
+    width: 40%;
+    
+}
+
+.history-item .text .text1{
+    font-size: 10px;
+}
+
+.history-item .text .text2{
+    font-size: 5px;
+}
+
+.history-item .price{
+    width: 30%;
+    color: var(--lightcolor);
+    text-align: center;
+}
+
+/**/
+.bottom-bar{
+    width: 100%;
+    height: 10%;
+    background-color: rgba(55, 37, 65, 0.641);
+
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.bottom-bar .fa{
+    color:rgb(251, 217, 249);
+    line-height: 35px;
+}
+
+
+
